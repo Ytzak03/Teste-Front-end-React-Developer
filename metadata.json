@@ -1,0 +1,6 @@
+{
+  "name": "TechNest",
+  "description": "Explore high-end consumer technology and lifestyle gadgets on TechNest. Features premium products, an interactive shopping cart, detail views, and a customer support assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
