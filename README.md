@@ -1,81 +1,119 @@
-# Technest E-commerce Frontend
+# TechNest - Teste Técnico Front-end React Developer
 
-Este projeto é uma aplicação de e-commerce frontend desenvolvida em React, refatorada para consumir dados de uma API simulada utilizando JSON Server.
+Projeto desenvolvido como solução para um teste técnico de Front-end React Developer. A aplicação simula uma loja virtual de produtos de tecnologia, oferecendo catálogo de produtos, página de detalhes, carrinho de compras, checkout e integração com uma API REST simulada através do JSON Server.
 
-## Arquitetura
+## Sobre o Projeto
 
-- **Frontend:** Desenvolvido com React e servido pelo [Vite](https://vitejs.dev/).
-- **API Simulada:** Utiliza [JSON Server](https://github.com/typicode/json-server) para simular uma API RESTful, consumindo dados do arquivo `dbTeste.json`.
+O objetivo do projeto é demonstrar boas práticas de desenvolvimento front-end utilizando React, TypeScript e consumo de APIs REST, com foco em organização de código, componentização, experiência do usuário e manutenção.
 
-## Como Executar Localmente
+A aplicação permite:
 
-**Pré-requisitos:**
-- Node.js (versão 18 ou superior)
-- npm (gerenciador de pacotes do Node.js)
+* Visualizar produtos em destaque na página inicial.
+* Navegar pelo catálogo completo de produtos.
+* Buscar produtos por nome.
+* Filtrar produtos por categoria e faixa de preço.
+* Ordenar produtos por preço, avaliação, popularidade e lançamentos.
+* Visualizar detalhes individuais de cada produto.
+* Adicionar e remover produtos do carrinho.
+* Alterar a quantidade de itens adicionados.
+* Visualizar subtotal e total da compra.
+* Finalizar uma compra simulada.
+* Persistir carrinho e histórico de pedidos utilizando Local Storage.
+* Consumir dados através de requisições HTTP utilizando Axios.
+* Utilizar uma API REST simulada com JSON Server a partir do arquivo `dbTeste.json`.
 
-**Passos:**
+## Tecnologias Utilizadas
 
-1.  **Navegue até o diretório do projeto:**
-    ```bash
-    cd /home/ubuntu/technest
-    ```
+* React
+* TypeScript
+* Vite
+* React Router DOM
+* Axios
+* JSON Server
+* Tailwind CSS
+* Lucide React
+* Local Storage
 
-2.  **Instale as dependências:**
-    ```bash
-    npm install
-    ```
+Os dados são fornecidos através do JSON Server utilizando o arquivo `dbTeste.json`.
 
-3.  **Inicie a aplicação (frontend e API simulada):**
-    ```bash
-    npm run dev
-    ```
+Endpoints disponíveis:
 
-    Este comando iniciará:
-    - O frontend do React na porta `5173` (Vite).
-    - A API simulada do JSON Server na porta `3001`, observando o arquivo `dbTeste.json`.
+```http
+GET http://localhost:3001/products
+GET http://localhost:3001/products/:id
+```
+
+## 💻 Como Executar o Projeto Localmente
+
+### 1. Clonar ou Extrair o Repositório
+
+Extraia o arquivo ZIP do projeto ou clone o repositório em sua máquina local.
+
+### 2. Instalar as Dependências
+
+Navegue até a pasta do projeto no terminal e execute:
+
+```bash
+npm install
+```
+
+### 3. Executar o Projeto em Desenvolvimento
+
+Para iniciar o frontend e a API local simultaneamente, execute:
+
+```bash
+npm run dev
+```
+
+Este comando executa concorrentemente:
+
+1. O **JSON Server** na porta `3001`, utilizando os dados do arquivo `dbTeste.json`.
+2. O **Vite**, responsável pelo servidor de desenvolvimento React.
+
+Após a inicialização, acesse a aplicação pelo navegador:
+
+```text
+Frontend: http://localhost:5173
+```
+
+A API estará disponível em:
+
+```text
+API: http://localhost:3001/products
+```
 
 ## Scripts Disponíveis
 
-- `npm run dev`: Inicia o servidor de desenvolvimento do Vite e o JSON Server simultaneamente.
-- `npm run client`: Inicia apenas o servidor de desenvolvimento do Vite.
-- `npm run api`: Inicia apenas o JSON Server, observando `dbTeste.json` na porta `3001`.
-- `npm run build`: Compila o projeto frontend para produção.
-- `npm run preview`: Visualiza a build de produção localmente.
-- `npm run lint`: Executa a verificação de tipos com TypeScript.
+### npm run dev
 
-## Endpoints da API (JSON Server)
+Inicia simultaneamente o frontend React e a API local utilizando JSON Server.
 
-Todos os endpoints são servidos em `http://localhost:3001`:
+### npm run client
 
-- `GET /products`: Retorna todos os produtos.
-- `GET /products/:id`: Retorna um produto específico pelo ID.
+Inicia apenas o frontend React.
 
-## Dependências
+### npm run api
 
-### Adicionadas
-- `json-server`: Para simular a API RESTful.
-- `concurrently`: Para executar o frontend e o JSON Server em paralelo.
+Inicia apenas a API local utilizando JSON Server.
 
-### Removidas
-- `express`: Framework de servidor Node.js.
-- `dotenv`: Para carregar variáveis de ambiente.
-- `@google/genai`: Possivelmente relacionado a alguma integração com Google AI Studio.
-- `@types/express`: Tipagens para Express.
-- `esbuild`: Bundler para JavaScript/TypeScript (usado no build do servidor anterior).
-- `tsx`: Para executar arquivos TypeScript diretamente (usado no script `dev` anterior).
+## Funcionalidades Implementadas
 
-## Arquivos Alterados
+* Home com produtos em destaque.
+* Catálogo responsivo com busca, filtros e ordenação.
+* Página de detalhes do produto.
+* Carrinho de compras com atualização dinâmica de quantidades.
+* Checkout com resumo do pedido e finalização simulada.
+* Indicadores de carregamento durante requisições.
+* Tratamento de erros de API.
+* Página 404 para rotas inexistentes.
+* Notificações de feedback ao usuário.
+* Persistência de carrinho utilizando Local Storage.
+* Histórico de pedidos persistente.
 
-- `package.json`: Atualizado com novos scripts e dependências.
-- `src/services/api.ts`: Refatorado para usar a instância centralizada do Axios com `baseURL` apontando para o JSON Server.
-- `src/App.tsx`: Atualizado para usar `apiService` em vez de `api` para chamadas de produtos.
-- `README.md`: Este arquivo, atualizado para refletir a nova arquitetura e instruções.
+## Observações
 
-## Arquivos Removidos
+Este projeto foi desenvolvido exclusivamente para fins de avaliação técnica.
 
-- `server.ts`: O arquivo do servidor Express customizado.
+O processo de checkout é apenas uma simulação e não realiza transações financeiras reais.
 
----
-
-**Autor:** Manus AI
-**Data:** 09 de Junho de 2026
+Para o funcionamento correto da aplicação, o JSON Server deve estar em execução. O comando `npm run dev` já realiza essa configuração automaticamente.
