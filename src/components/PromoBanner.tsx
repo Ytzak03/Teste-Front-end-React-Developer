@@ -44,7 +44,7 @@ export default function PromoBanner({ onBrowseClick }: PromoBannerProps) {
             {/* Dark gradient blur covering the boundary between text and photo */}
             <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-zinc-950 to-transparent hidden md:block z-10" />
             <img
-              src="/src/assets/images/desktop_banner_1780756662575.png"
+              src="/images/desktop_banner_1780756662575.png"
               alt="Workstation productivity tools"
               referrerPolicy="no-referrer"
               className="object-cover w-full h-full transform hover:scale-102 transition-transform duration-500"

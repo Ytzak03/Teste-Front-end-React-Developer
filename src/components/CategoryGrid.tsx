@@ -16,14 +16,14 @@ export default function CategoryGrid({ onCategoryFilter }: CategoryGridProps) {
     {
       title: 'Novidades',
       buttonText: 'Novidades',
-      image: '/src/assets/images/vr_category_1780756692032.png',
+      image: '/images/vr_category_1780756692032.png',
       filterValue: 'new',
       description: 'Lançamentos e headsets imersivos de ponta',
     },
     {
       title: 'Mais Vendidos',
       buttonText: 'Mais Vendidos',
-      image: '/src/assets/images/dock_category_1780756705294.png',
+      image: '/images/dock_category_1780756705294.png',
       filterValue: 'bestselling',
       description: 'Nossos dispositivos mais consagrados e elogiados',
     },

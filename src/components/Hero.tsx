@@ -17,7 +17,7 @@ export default function Hero({ onShopClick }: HeroProps) {
       {/* Immersive Full-Bleed Background Image with Neon Green aesthetic */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <img
-          src="/src/assets/images/hero_background_neon_1780760347641.png"
+          src="/images/hero_background_neon_1780760347641.png"
           alt="TechNest Premium Lifestyle Setup"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center transform scale-102 filter brightness-[0.75] saturate-[1.05]"
